@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-firbase-app'`, () => {
+  it(`should have as title 'clinic-manangement-sys'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-firbase-app');
+    expect(app.title).toEqual('clinic-manangement-sys');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-firbase-app app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('clinic-manangement-sys app is running!');
   });
 });

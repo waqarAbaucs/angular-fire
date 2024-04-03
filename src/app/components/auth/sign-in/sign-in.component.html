@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Login</h2>
+    <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+    <form (ngSubmit)="login()">
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" [(ngModel)]="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary my-2">Login</button>
+    </form>
+    <button type="button" class="btn btn-danger" [routerLink]="['/forgot-password']" routerLinkActive="router-link-active" >Forgot Password</button>
+
+    <button type="button" class="btn btn-primary" [routerLink]="['/sign-up']" routerLinkActive="router-link-active" >Create an Account</button>
+</div>

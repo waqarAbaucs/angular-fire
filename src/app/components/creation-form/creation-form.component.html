@@ -1,0 +1,60 @@
+<div class="container mt-5">
+    <h1 class="mb-4">Creation Form</h1>
+    <form [formGroup]="creationForm" (ngSubmit)="onSubmit()">
+        <div class="image-upload-container" (click)="fileInput.click()">
+            <input type="file" accept="image/*" (change)="onImageSelected($event)" style="display: none;" #fileInput>
+            <img *ngIf="imageUrl" [src]="imageUrl" alt="Selected Image" class="image-preview">
+            <div class="image-placeholder" *ngIf="!imageUrl">Click to upload image</div>
+          </div>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" formControlName="firstName">
+        <!-- Display validation errors if the field is touched and invalid -->
+        <div *ngIf="creationForm.get('firstName')?.touched && creationForm.get('firstName')?.invalid" class="text-danger">
+          First Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" formControlName="lastName">
+        <!-- Display validation errors if the field is touched and invalid -->
+        <div *ngIf="creationForm.get('lastName')?.touched && creationForm.get('lastName')?.invalid" class="text-danger">
+          Last Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <!-- Display validation errors if the field is touched and invalid -->
+        <div *ngIf="creationForm.get('email')?.touched && creationForm.get('email')?.invalid" class="text-danger">
+          Email is required and must be a valid email address
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="text" class="form-control" id="phoneNumber" formControlName="phoneNumber">
+        <!-- Display validation errors if the field is touched and invalid -->
+        <div *ngIf="creationForm.get('phoneNumber')?.touched && creationForm.get('phoneNumber')?.invalid" class="text-danger">
+          Phone Number is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea class="form-control" id="address" rows="3" formControlName="address"></textarea>
+        <!-- Display validation errors if the field is touched and invalid -->
+        <div *ngIf="creationForm.get('address')?.touched && creationForm.get('address')?.invalid" class="text-danger">
+          Address is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+        <!-- Display validation errors if the field is touched and invalid -->
+        <div *ngIf="creationForm.get('message')?.touched && creationForm.get('message')?.invalid" class="text-danger">
+          Message is required
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-4">Submit</button>
+    </form>
+  </div>
+  
