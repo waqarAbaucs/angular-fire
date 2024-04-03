@@ -16,7 +16,7 @@ const routes: Routes = [
     path: 'dashboard', component: UserDashboardComponent, canActivate: [AuthGuard]
   },
   {
-    path: 'creation-form', component: CreationFormComponent
+    path: 'creation-form', component: CreationFormComponent, canActivate: [AuthGuard]
   },
   {
     path: 'sign-up', component: SignUpComponent
