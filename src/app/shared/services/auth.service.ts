@@ -47,7 +47,8 @@ export class AuthService {
         console.log("result", result)
         this.afAuth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['creation-form']);
+            localStorage.setItem('loggedIn', 'true')
+            this.router.navigate(['/creation-form']);
           }
         });
       })
@@ -114,6 +115,7 @@ export class AuthService {
   SignOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
+      localStorage.removeItem('loggedIn')
       this.router.navigate(['/']);
     });
   }
