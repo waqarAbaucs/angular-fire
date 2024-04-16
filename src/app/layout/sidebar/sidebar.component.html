@@ -1,0 +1,52 @@
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100 sidebar">
+                <!-- Logo -->
+                <a href="/" class="navbar-brand d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">
+                        <img class="logo" src="../../../assets/images/ASQ-logo.png" alt="">
+                    </span>
+                </a>
+                <!-- Sidebar Menu -->
+                <ul class="nav flex-column align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a routerLink="dashboard/records" class="nav-link align-middle px-0 active">
+                            <i class="fs-4 bi-list"></i> <span class="ms-1 d-none d-sm-inline">My Record</span>
+                            <i class="bi bi-chevron-right ms-auto"></i>
+                        </a>
+                        <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                            <li>
+                                <a href="#" class="nav-link px-0">Submenu Item 1</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link px-0">Submenu Item 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-bar-chart"></i> <span class="ms-1 d-none d-sm-inline">Analytics</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-question"></i> <span class="ms-1 d-none d-sm-inline">Help & Support</span> 
+                        </a>
+                    </li>
+                    <hr class="mt-2 mb-2 w-100">
+                    <li>
+                        <a href="#" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-person"></i> <span class="ms-1 d-none d-sm-inline">My Profile</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a (click)="logOut()" class="nav-link align-middle px-0" style="cursor: pointer;">
+                            <i class="fs-4 bi-box-arrow-right"></i> <span class="ms-1 d-none d-sm-inline">Logout</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<form class="form-group" [formGroup]="form">
+
+  <div class="row my-3 gap-3 small-font">
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="refrigerant-gas" class="form-label">Refrigerant Gas</label>
+      <input class="form-control" formControlName="refrigerantGas" id="refrigerant-gas" name="refrigerant-gas" />
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="gas-quantity" class="form-label">Gas Quantity</label>
+      <input class="form-control" formControlName="gasQuantity" id="gas-quantity" name="gas-quantity" />
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="unit" class="form-label">Unit</label>
+      <select class="form-select" formControlName="unit" id="unit">
+        <option *ngFor="let unit of unitList" [value]="unit.value">
+          {{ unit.label }}
+        </option>
+      </select>
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="image" class="form-label">Attach Image</label>
+      <input class="form-control" formControlName="attachedImage" type="file" id="image" name="image" />
+    </div>
+  </div>
+</form>

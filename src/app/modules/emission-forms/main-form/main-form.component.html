@@ -1,0 +1,72 @@
+<div class="m-4">
+  <div class="card p-4">
+    <div class="flex">
+      <p-breadcrumb class="" [model]="items"></p-breadcrumb>
+    </div>
+
+    <div class="stepper">
+      <p-steps [model]="steps" [activeIndex]="activeStepIndex"></p-steps>
+    </div>
+
+    <div class="form-group pb-4">
+      <div class="flex">
+        <p class="title">{{ formTitle + (activeStepIndex + 1) }}</p>
+        <button class="btn btn-primary">Add Record</button>
+      </div>
+      <div [ngSwitch]="activeStepIndex">
+        <div *ngSwitchCase="0">
+          <form-1-1 [form]="form1" [unitList]="unitList"></form-1-1>
+        </div>
+        <div *ngSwitchCase="1">
+          <form-1-2 [form]="form2" [unitList]="unitList"></form-1-2>
+        </div>
+        <div *ngSwitchCase="2">
+          <form-1-3 [form]="form3" [unitList]="unitList"></form-1-3>
+        </div>
+        <div *ngSwitchCase="3">
+          <form-1-4 [form]="form4" [unitList]="unitList"></form-1-4>
+        </div>
+        <div *ngSwitchDefault>
+          <form-1-1 [form]="form1" [unitList]="unitList"></form-1-1>
+        </div>
+      </div>
+      <div class="flex gap-2 justify-content-end bottom-btn">
+        <button class="btn btn-success" (click)="onSubmit()">Save</button>
+        <button
+          class="btn btn-outline-primary"
+          *ngIf="activeStepIndex > 0"
+          (click)="prevStep()"
+        >
+          Previous
+        </button>
+        <button
+          class="btn btn-primary"
+          *ngIf="activeStepIndex < steps.length - 1"
+          (click)="nextStep()"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="card p-4 mt-4">
+    <div [ngSwitch]="activeStepIndex">
+      <div *ngSwitchCase="0">
+        <app-table1-1></app-table1-1>
+      </div>
+      <div *ngSwitchCase="1">
+        <app-table1-2></app-table1-2>
+      </div>
+      <div *ngSwitchCase="2">
+        <app-table1-3></app-table1-3>
+      </div>
+      <div *ngSwitchCase="3">
+        <app-table1-4></app-table1-4>
+      </div>
+      <div *ngSwitchDefault>
+        <app-table1-1></app-table1-1>
+      </div>
+    </div>
+  </div>
+</div>

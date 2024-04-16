@@ -1,0 +1,106 @@
+.small-font {
+  font-size: small;
+}
+
+ input {
+  border-radius: 8px;
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.card{
+  border-radius: 0px;
+  padding: 1rem;
+  margin-top: .5rem;
+}
+
+:host ::ng-deep .title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.68px;
+  text-align: left;
+  color: #1E1E1E;
+  margin: 0;
+}
+
+:host ::ng-deep .flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-btn button {
+  padding: 3px 30px;
+}
+
+:host ::ng-deep .btn {
+  border-radius: 100px;
+  height: 41px;
+  width: 146px;
+  top: 200px;
+  border-radius: 100px;
+  opacity: 0px;
+}
+
+:host ::ng-deep .btn-primary {
+  background-color: #0b4ea2;
+  border-color: #0b4ea2;
+}
+
+:host ::ng-deep .btn-success {
+  background-color: #28A745;
+  border-color: #28A745;
+}
+
+
+/* style for BreadCrumb */
+
+:host ::ng-deep .p-breadcrumb .p-menuitem-text {
+  line-height: 1;
+  font-size: 0.6rem;
+}
+
+:host ::ng-deep .pi-chevron-right:before {
+  content: "\00BB";
+}
+
+:host ::ng-deep .p-breadcrumb ul li .p-menuitem-link .p-menuitem-text:hover {
+  color: blue;
+  text-decoration: underline;
+  /* Add underline on hover */
+}
+
+:host ::ng-deep .p-breadcrumb {
+  background: #ffffff;
+  border: #dee2e6;
+  border-radius: 6px;
+  padding: 0rem;
+}
+
+/* ---------------------------------- */
+
+/* styling for steps */
+
+:host ::ng-deep .p-steps {
+  text-align: center; /* Center the entire stepper component */
+}
+
+:host ::ng-deep .p-steps .p-steps-item {
+  display: inline-block; /* Make each step item inline-block */
+  position: relative;
+}
+
+:host ::ng-deep .p-steps .p-steps-item::before {
+  content: "";
+  border-top: 8px solid #dee2e6;
+}
+
+:host ::ng-deep .p-steps .p-steps-item.p-highlight .p-steps-number {
+  background: #50AE31;
+  color: white;
+}
+
+
+/* --------------------------- */

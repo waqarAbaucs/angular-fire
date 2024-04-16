@@ -1,0 +1,118 @@
+<form class="form-group" [formGroup]="form">
+  <div class="row my-3 gap-3 small-font">
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="fuel-type" class="form-label"
+        >Fuel Type <span class="text-danger">*</span></label
+      >
+      <input
+        class="form-control"
+        formControlName="fuelType"
+        id="fuel-type"
+        name="fuel-type"
+        [ngClass]="{
+          'is-invalid':
+            form.get('fuelType')?.touched && form.get('fuelType')?.invalid
+        }"
+      />
+      <small
+        class="text text-danger"
+        *ngIf="form.get('fuelType')?.touched && form.get('fuelType')?.invalid"
+        >Fuel Type Required</small
+      >
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="fuel" class="form-label"
+        >Fuel <span class="text-danger">*</span></label
+      >
+      <input
+        class="form-control"
+        formControlName="fuel"
+        id="fuel"
+        name="fuel"
+        [ngClass]="{
+          'is-invalid': form.get('fuel')?.touched && form.get('fuel')?.invalid
+        }"
+      />
+      <small
+        class="text text-danger"
+        *ngIf="form.get('fuel')?.touched && form.get('fuel')?.invalid"
+        >Fuel Required</small
+      >
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="unit" class="form-label"
+        >Unit <span class="text-danger">*</span></label
+      >
+      <select
+        class="form-select"
+        id="unit"
+        formControlName="unit"
+        [ngClass]="{
+          'is-invalid': form.get('unit')?.touched && form.get('unit')?.invalid
+        }"
+      >
+        <option *ngFor="let unit of unitList" [value]="unit">
+          {{ unit }}
+        </option>
+      </select>
+      <small
+        class="text text-danger"
+        *ngIf="form.get('unit')?.touched && form.get('unit')?.invalid"
+        >Unit Required</small
+      >
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="quantity" class="form-label"
+        >Quantity <span class="text-danger">*</span></label
+      >
+      <input
+        class="form-control"
+        formControlName="quantity"
+        type="number"
+        id="quantity"
+        name="quantity"
+        [ngClass]="{
+          'is-invalid':
+            form.get('quantity')?.touched && form.get('quantity')?.invalid
+        }"
+      />
+
+      <small
+        class="text text-danger"
+        *ngIf="form.get('quantity')?.touched && form.get('quantity')?.invalid"
+        >Quantity Required</small
+      >
+    </div>
+
+    <div class="col-md-6 col-lg-3 col-sm-12">
+      <label for="image" class="form-label"
+        >Attach Image <span class="text-danger">*</span></label
+      >
+      <input
+        class="form-control"
+        formControlName="attachedImage"
+        type="file"
+        id="image"
+        name="image"
+        [ngClass]="{
+          'is-invalid':
+            form.get('attachedImage')?.touched &&
+            form.get('attachedImage')?.invalid
+        }"
+      />
+
+      <small
+        class="text text-danger"
+        *ngIf="
+          form.get('attachedImage')?.touched &&
+          form.get('attachedImage')?.invalid
+        "
+      >
+        Image Required
+      </small>
+    </div>
+  </div>
+</form>

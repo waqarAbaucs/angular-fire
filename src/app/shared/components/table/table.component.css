@@ -1,0 +1,13 @@
+:host ::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-header, .p-datatable-thead > tr > th {
+  background-color: #bcd493;
+  color: white;
+}
+:host ::ng-deep .p-datatable.p-datatable-gridlines .p-datatable-footer {
+  background-color: #bcd493;
+  font-family: 'Open Sans', sans-serif;
+  align-items: center;
+}
+:host ::ng-deep.p-datatable.p-datatable-gridlines .p-datatable-thead > tr > th {
+  background-color: #50ae31;
+  color: white;
+}

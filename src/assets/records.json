@@ -1,0 +1,94 @@
+{
+    "data":[
+        {
+          "id": 1,
+          "companyName": "ABC Corporation",
+          "date": "2024-04-07",
+          "phone": "123-456-7890"
+        },
+        {
+          "id": 2,
+          "companyName": "XYZ Industries",
+          "date": "2024-04-07",
+          "phone": "987-654-3210"
+        },
+        {
+          "id": 3,
+          "companyName": "PQR Enterprises",
+          "date": "2024-04-07",
+          "phone": "456-789-0123"
+        },
+        {
+          "id": 4,
+          "companyName": "LMN Ltd.",
+          "date": "2024-04-07",
+          "phone": "789-012-3456"
+        },
+        {
+          "id": 5,
+          "companyName": "EFG Corporation",
+          "date": "2024-04-07",
+          "phone": "012-345-6789"
+        },
+        {
+          "id": 6,
+          "companyName": "RST Industries",
+          "date": "2024-04-07",
+          "phone": "321-654-9870"
+        },
+        {
+          "id": 7,
+          "companyName": "GHI Enterprises",
+          "date": "2024-04-07",
+          "phone": "654-987-0123"
+        },
+        {
+          "id": 8,
+          "companyName": "JKL Ltd.",
+          "date": "2024-04-07",
+          "phone": "987-012-3456"
+        },
+        {
+          "id": 9,
+          "companyName": "MNO Corporation",
+          "date": "2024-04-07",
+          "phone": "123-456-7890"
+        },
+        {
+          "id": 10,
+          "companyName": "ABC Industries",
+          "date": "2024-04-07",
+          "phone": "987-654-3210"
+        },
+        {
+          "id": 11,
+          "companyName": "PQR Ltd.",
+          "date": "2024-04-07",
+          "phone": "456-789-0123"
+        },
+        {
+          "id": 12,
+          "companyName": "LMN Enterprises",
+          "date": "2024-04-07",
+          "phone": "789-012-3456"
+        },
+        {
+          "id": 13,
+          "companyName": "EFG Ltd.",
+          "date": "2024-04-07",
+          "phone": "012-345-6789"
+        },
+        {
+          "id": 14,
+          "companyName": "RST Corporation",
+          "date": "2024-04-07",
+          "phone": "321-654-9870"
+        },
+        {
+          "id": 15,
+          "companyName": "GHI Industries",
+          "date": "2024-04-07",
+          "phone": "654-987-0123"
+        }
+      ]      
+  }

@@ -1,0 +1,89 @@
+<div class="table-container">
+    <p-table #dt1 [value]="customers" dataKey="id" [rows]="10" [showCurrentPageReport]="true"
+        [rowsPerPageOptions]="[10,25,50]" [loading]="loading" styleClass="p-datatable-customers" [paginator]="true"
+        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+        [globalFilterFields]="['name','country.name','representative.name','status']">
+        <ng-template pTemplate="caption">
+            <div class="d-flex justify-content-end my-2">
+                <p-button styleClass="btn-newrecord" label="New Record" icon="pi pi-plus"
+                    [routerLink]="['/dashboard/add-records']" iconPos="left"></p-button>
+            </div>
+            <div class="d-flex align-items-center justify-content-between">
+                <div>
+                    <span class="heading">Existing Record (101)</span>
+                </div>
+                <input pInputText class="search" type="text"
+                    (input)="dt1.filterGlobal($any($event.target).value, 'contains')"
+                    placeholder="Search By Company Name / ID" />
+            </div>
+        </ng-template>
+
+        <ng-template pTemplate="header">
+            <tr>
+                <th>
+
+                </th>
+                <th>
+                    <div class="p-d-flex p-jc-between p-ai-center">
+                        Company Name
+                    </div>
+                </th>
+                <th>
+                    <div class="p-d-flex p-jc-between p-ai-center">
+                        Date
+                    </div>
+                </th>
+                <th>
+                    <div class="p-d-flex p-jc-between p-ai-center">
+                        Phone
+                    </div>
+                </th>
+                <th>
+                    <div class="p-d-flex p-jc-between p-ai-center">
+                        Analytics
+                    </div>
+                </th>
+                <th style="width: 8rem">
+                    <div class="p-d-flex p-jc-between p-ai-center">
+                        <!-- Verified -->
+                        <i class="pi pi-th-large"></i>
+                        <i class="pi pi-bars ms-2"></i>
+                    </div>
+                </th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-customer>
+            <tr>
+                <td class="green-circle">
+                    <div class="circle"></div>
+                </td>
+
+                <td>
+                    <strong>{{customer.companyName}}</strong>
+                    <br>
+                    <small>Active</small>
+                </td>
+                <td>
+                    {{customer.date | date: 'MM/dd/yyyy'}}
+                    <br>
+                    <small>You</small>
+                </td>
+                <td>
+                    {{customer.phone}}
+                </td>
+                <td>
+                    <p-button label="Show Analytics" styleClass="p-mr-2 showAnalytics"></p-button>
+                </td>
+                <td class="p-text-center see-more" routerLink="/emission-forms">
+                    See More
+                    <i class="pi pi-arrow-right see-more-icon"></i>
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage">
+            <tr>
+                <td colspan="7">No customers found.</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>

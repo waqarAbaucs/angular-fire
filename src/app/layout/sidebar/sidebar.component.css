@@ -1,0 +1,52 @@
+.container-fluid {
+    padding-left: 15px; /* Add left padding to the container */
+}
+
+.sidebar {
+    width: 170px;
+}
+
+.logo {
+    width: 120px;
+    height: 90px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand span {
+    margin-left: 10px; /* Add spacing between logo and text */
+}
+
+.nav.flex-column {
+    padding-left: 0; /* Remove left padding from the sidebar */
+}
+
+.nav-link {
+    padding: 10px; /* Add padding to the links */
+    color: black;
+}
+
+.nav-link:hover {
+    padding: 10px; /* Add padding to the links */
+    color: #50AE31;
+}
+
+/* Style for the arrow icon */
+.bi-chevron-right {
+    transition: transform 0.4s ease;
+}
+
+/* Rotate the arrow icon when the submenu is opened */
+.collapsed .bi-chevron-right {
+    transform: rotate(90deg);
+}
+
+/* Active status for the menu item */
+.nav-item.active .nav-link {
+    background-color: #50AE31;
+    color: rgb(161, 183, 208);
+    border-radius: 5px;
+}

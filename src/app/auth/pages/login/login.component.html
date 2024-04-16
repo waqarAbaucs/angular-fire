@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="left-side">
+          <img src="../../../../assets/images/globe.png" alt="Signup Image" class="img-fluid">
+          <div class="logo">
+            <img class="logo-image" src="../../../../assets/images/ASQ-logo.png" alt="Logo">
+        </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card right-card">
+      <div class="card-body text-center">
+        <h1 class="pb-4">Welcome!</h1>
+        <p> <a routerLink="signup">Create a free account</a> or log in to get started with us:</p>
+        <form (ngSubmit)="login()">
+          <div class="p-fluid">
+            <div class="p-field">
+              <label for="email" class="label-align">Email</label>
+              <input id="email" type="email" pInputText placeholder="Enter your email" [(ngModel)]="email" name="email" required class="form-control">
+            </div>
+            <div class="p-field">
+              <label for="password" class="label-align">Password</label>
+              <input id="password" type="password" pInputText placeholder="Enter your password" [(ngModel)]="password" name="password" required class="form-control">
+            </div>
+          </div>
+          <div class="forgot-password ml-auto">
+            <a href="#">Forgot Password</a>
+          </div>
+          <button type="submit" pButton label="Sign in" class="p-button-raised p-button-rounded btn mt-2">Sign in</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,58 @@
+<div class="form-container">
+    <div class="d-flex">
+            <span class="heading">Create New</span>
+    </div>
+    <div class="empty-border"></div>
+
+    <div class="form">
+        <form [formGroup]="form" (submit)="submitRecord()">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Company ID</p>
+                    <input class="form-control" type="text" pInputText formControlName="companyId" />
+                </div>
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Total Employee Count</p>
+                    <input class="form-control" type="text" pInputText formControlName="employeeCount" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Organization Name</p>
+                    <input class="form-control" type="text" pInputText formControlName="organizationName" />
+                </div>
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Revenue Footprint</p>
+                    <input class="form-control" type="text" pInputText formControlName="revenueFootprint" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Organization Type</p>
+                    <p-dropdown class="dropdown-control" styleClass="w-100" [options]="organizationType" formControlName="organizationType"
+                        optionLabel="name" [autoDisplayFirst]="false"></p-dropdown>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Super Sector</p>
+                    <p-dropdown class="dropdown-control" styleClass="w-100" [options]="superSectors" formControlName="superSector"
+                    (onChange)="onSuperSectorChange()" [autoDisplayFirst]="false" appendTo="body"></p-dropdown>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <p class="form-label">Sector</p>
+                    <p-dropdown class="dropdown-control" styleClass="w-100" [options]="getFilteredSectors()" formControlName="sector">
+                    </p-dropdown>
+                  </div>
+            </div>
+            <div class="d-flex justify-content-end my-5">
+                <p-button styleClass="btn-newrecord" label="Emission Test"></p-button>
+            </div>
+        </form>
+    </div>
+
+</div>
